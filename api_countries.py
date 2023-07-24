@@ -13,8 +13,8 @@ def listar_nombre_paises(url):
         Moneda = pais['currencies']
         for monedas in Moneda.values():
             print(f"La moneda que se utiliza es: {monedas['name']}")
-        Smoneda = pais['idd']['root'] + pais['idd']['suffixes'][0]
-        print(f"El codigo telefonico es: {Smoneda}")
+        moneda = pais['idd']['root'] + pais['idd']['suffixes'][0]
+        print(f"El codigo telefonico es: {moneda}")
 
 
 url = 'https://restcountries.com/v3.1/independent?status=true&fields=translations,capital,currencies,idd'
